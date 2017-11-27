@@ -1,0 +1,116 @@
+$grid-size: 33.333%;
+
+.hold {
+  padding: 15px 0 15px 15px;
+}
+
+//nav
+.navigation {
+  border-right: solid 1px #a9a9a9;
+  height: 100%;
+
+  &-ul {
+    list-style: none;
+    padding: 0;
+
+      .selected {
+        transition: ease 0.4s;  
+        padding: 5px 10px;
+        border: solid 1px #a9a9a9;
+        width: 40%;
+        z-index: 5;
+
+        .nav {
+          &-heading {
+            text-align: center;
+          }
+
+          &-content {
+            display: block;
+          }
+        }
+
+      }
+      .nav-content {
+        display: none;
+        font-size: 14px;
+        padding: 10px;
+      }
+
+    .nav-heading {
+      display: block;
+      transition: ease 0.4s;
+
+      &:hover, &:focus {
+        padding-left: 15px;
+        transition: ease 0.4s;
+      }
+    }
+  }
+}
+
+//item
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid {
+  width: 100%;
+  * {
+    box-sizing: border-box;
+  }
+
+  .grid-sizer, .grid-item {
+    width: $grid-size;
+  }
+
+  .grid-item {
+    float:left;
+    padding: 0 15px 15px 0;
+
+    .image {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .text {
+
+    }
+  }
+}
+
+// media
+//xs 576px
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 768px) {
+  .grid-sizer, .grid-item {
+    width: 50%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 769px) {
+  .navigation-content {
+    position:fixed;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+
+
+}

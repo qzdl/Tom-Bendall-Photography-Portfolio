@@ -1,0 +1,29 @@
+body {
+  font-family: $barlow-font;
+  font-size: 14px;
+}
+
+
+.heading {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: $primary-font;
+  margin-top: 0;
+}
+
+.nav-heading {
+  color: $grey-light;
+  font-size: 29px;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
