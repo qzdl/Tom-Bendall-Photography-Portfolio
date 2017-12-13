@@ -1,23 +1,27 @@
+// main: ../imports.scss
+
 $grid-size: 33.333%;
 
 .hold {
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 0 15px;
 }
+
+#col1,
+#col2 {
+  transition: width 0.4s ease;
+}
+
 
 //nav
 .navigation {
-  border-right: solid 1px #a9a9a9;
-  height: 100%;
-
   &-ul {
     list-style: none;
     padding: 0;
 
       .selected {
-        transition: ease 0.4s;  
+        transition: ease 0.4s;
         padding: 5px 10px;
         border: solid 1px #a9a9a9;
-        width: 40%;
         z-index: 5;
 
         .nav {
@@ -50,23 +54,22 @@ $grid-size: 33.333%;
 }
 
 //item
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .grid {
-  width: 100%;
   * {
     box-sizing: border-box;
   }
 
-  .grid-sizer, .grid-item {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &-sizer, &-item {
     width: $grid-size;
   }
 
-  .grid-item {
+  &-item {
     float:left;
     padding: 0 15px 15px 0;
 
@@ -91,15 +94,56 @@ $grid-size: 33.333%;
 
 @media (max-width: 768px) {
   .grid-sizer, .grid-item {
-    width: 50%;
+    width: 100%;
+  }
+
+  .navigation-ul {
+    transition: all 0.4s ease;
+    position: absolute;
+    top: -400%;
+  }
+
+  //js affected
+  .navReveal {
+
+  h1 {
+    font-weight: 700;
+    text-shadow: 0px 0px 1px #636363;
+  }
+
+  .navigation-ul {
+    top: 80%;
+    margin-right: 45px;
+
+    .selected {
+      background-color: rgba(251, 251, 251, 0.5);
+      margin-top: 10px;
+    }
+  }
+}
+  #col1 {
+    height: 45px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 
 @media (min-width: 769px) {
-  .navigation-content {
-    position:fixed;
+  .col1--active {
+    width: 35% !important;
+  }
+
+  .col2--active {
+    width: 65% !important;
+  }
+
+  .navbar-fixed-left {
+    position: fixed;
+    width: inherit;
+    padding-right: 35px;
   }
 }
 

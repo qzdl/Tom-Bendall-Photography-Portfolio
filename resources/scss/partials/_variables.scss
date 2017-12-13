@@ -1,6 +1,8 @@
+// main: ../imports.scss
+
 $grey: #333;
 $grey-light: #555;
 
-$barcode-font: 'Libre Barcode 39 Text';
+$barcode-font: 'Libre Barcode 39 Text', 'sans serif';
 $barlow-font: 'Barlow Semi Condensed', sans-serif;
 $primary-font: $grey;
